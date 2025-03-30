@@ -14,6 +14,12 @@ const CUSTOM_OBJECT_ID = process.env.CUSTOM_OBJECT
 // TODO: ROUTE 1 - Create a new app.get route for the homepage to call your custom object data. Pass this data along to the front-end and create a new pug template in the views folder.
 
 // * Code for Route 1 goes here
+app.get("/", async (req, res) => {
+    const url = `https://api.hubapi.com/crm/v3/objects/${CUSTOM_OBJECT_ID}?properties=name,species,about`;
+    const headers = { Authorization: `Bearer ${PRIVATE_APP_ACCESS}` };
+
+  
+});
 
 // TODO: ROUTE 2 - Create a new app.get route for the form to create or update new custom object data. Send this data along in the next route.
 
