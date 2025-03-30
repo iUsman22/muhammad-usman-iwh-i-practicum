@@ -39,6 +39,14 @@ app.get("/update-cobj", (req, res) => {
 
 // * Code for Route 3 goes here
 
+app.post("/update-cobj", async (req, res) => {
+    const { name, species, about } = req.body;
+    const url = `https://api.hubapi.com/crm/v3/objects/${CUSTOM_OBJECT_ID}`;
+    const headers = { Authorization: `Bearer ${PRIVATE_APP_ACCESS}`, "Content-Type": "application/json" };
+
+    
+});
+
 /** 
 * * This is sample code to give you a reference for how you should structure your calls. 
 
