@@ -44,7 +44,15 @@ app.post("/update-cobj", async (req, res) => {
     const url = `https://api.hubapi.com/crm/v3/objects/${CUSTOM_OBJECT_ID}`;
     const headers = { Authorization: `Bearer ${PRIVATE_APP_ACCESS}`, "Content-Type": "application/json" };
 
-    
+    const data = { properties: { name, species, about } };
+
+    try {
+        await axios.post(url, data, { headers });
+        res.redirect("/");
+    } catch (error) {
+        console.error("Error creating custom object:", error.response?.data || error.message);
+        res.status(500).send("Error creating record");
+    }
 });
 
 /** 
