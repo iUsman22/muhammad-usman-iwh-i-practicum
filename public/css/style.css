@@ -97,20 +97,40 @@ a:hover {
     border-radius: 15px;
     box-shadow: 3px 2px 6px lightgrey;
 }
-
-label, input {
-    margin-top: 5px;
-    display: block;
-    font-size: inherit;
+/* Center the form and align labels with inputs */
+.form-group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
 }
 
-input[type="text"] {
-    padding: .25rem;
+/* Style labels to keep them aligned with inputs */
+label {
+    width: 100px; /* Set a fixed width for alignment */
+    text-align: right;
+    margin-right: 10px;
 }
 
-input[type="submit"] {
-    background-color: lightgrey;
+/* Make inputs take the remaining space */
+input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Style the submit button */
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
     border: none;
-    padding: .375rem 1rem;
-    margin-top: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
 }
