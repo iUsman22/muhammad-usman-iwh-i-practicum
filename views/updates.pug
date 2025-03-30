@@ -1,0 +1,12 @@
+doctype html
+html
+  head
+    title= `${title}`
+  body
+    h1 Add a New Custom Object
+    form(action="/update-cobj" method="POST")
+      label(for="name") Name:
+      input(type="text" name="name" required)
+      
+    br
+    a(href="/") Return to homepage
